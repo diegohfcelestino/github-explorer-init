@@ -1,0 +1,94 @@
+.search {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 4rem;
+
+  .name-users {
+    margin: 1rem;
+    text-align: center;
+    color: var(--COLOR-TITLE);
+  }
+
+  .users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    grid-gap: 1.5rem;
+
+    .image-profile {
+      .image-users {
+        margin: 0 0 0 12rem;
+        width: 10rem;
+        border-radius: 50%;
+        border: 3px solid var(--COLOR-SECONDARY);
+        transition: 1s all ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .description-users {
+      margin-top: 1rem;
+      font-size: 1rem !important;
+      color: var(--WHITE);
+
+      :first-child {
+        font-size: 0.9rem !important;
+      }
+
+      .flex {
+        display: flex;
+      }
+    }
+  }
+}
+
+.repository-list-user {
+  .title-list-user {
+    text-align: center;
+    color: var(--COLOR-SECONDARY);
+  }
+
+  .users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    list-style: none;
+    grid-gap: 1rem;
+    width: 100%;
+
+    .item-list {
+      background: #242424;
+      padding: 5%;
+      border-radius: 4%;
+      transition: 1s all ease;
+
+      &:hover {
+        cursor: pointer;
+        border: 3px solid var(--COLOR-SECONDARY);
+        transform: scale(1.2);
+      }
+
+      h5 {
+        color: var(--COLOR-LIST);
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 12px;
+        color: var(--GRAY-SECONDARY);
+        margin-top: 5px;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--COLOR-SECONDARY);
+
+        &:hover {
+          color: var(--GREEN);
+        }
+      }
+    }
+  }
+}

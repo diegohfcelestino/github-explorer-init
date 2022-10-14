@@ -1,0 +1,33 @@
+.name-profile {
+  margin: 4% 0 0 0;
+  text-align: center;
+  color: var(--COLOR-TITLE);
+}
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  list-style: none;
+  width: 90%;
+
+  .image-profile {
+    .sobre-foto {
+      margin: 0 0 0 12rem;
+      width: 10rem;
+      border-radius: 50%;
+      border: 3px solid var(--COLOR-SECONDARY);
+      transition: 1s all ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .description-profile {
+    font-size: 1rem !important;
+    color: var(--WHITE);
+
+    .flex {
+      display: flex;
+    }
+  }
+}
