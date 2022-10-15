@@ -6,7 +6,6 @@ export function Home() {
   return (
     <div className="contentWrapper">
       <NavBar />
-      <SearchUser />
       <Profile />
       <RepositoryList />
     </div>

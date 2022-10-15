@@ -6,7 +6,7 @@ export const api = axios.create({
 
 export async function handleRepositoryList() {
   const auth = localStorage.getItem("user");
-  const url = `https://api.github.com/users/${auth}/repos?per_page=6`;
+  const url = `${api}/${auth}/repos?per_page=1`;
 
   try {
     const response = await fetch(url);
@@ -19,7 +19,7 @@ export async function handleRepositoryList() {
 
 export async function searchProfile() {
   const auth = localStorage.getItem("user");
-  const url = `https://api.github.com/users/${auth}`;
+  const url = `${api}/${auth}`;
 
   try {
     const response = await fetch(url);
@@ -31,8 +31,7 @@ export async function searchProfile() {
 }
 
 export async function searchUsersList(userName) {
-  const url = `https://api.github.com/users/${userName}`;
-  //const url = `https://api.github.com/search/users?q=${userName}`; para pesquisar varios usuários
+  const url = `${api}/${userName}`;
 
   try {
     const response = await fetch(url);
@@ -44,7 +43,7 @@ export async function searchUsersList(userName) {
 }
 
 export async function repositoryListUsers(userName) {
-  const url = `https://api.github.com/users/${userName}/repos?per_page=3`;
+  const url = `${api}/${userName}/repos?per_page=1`;
 
   return new Promise((resolve, reject) => {
     api
@@ -55,7 +54,7 @@ export async function repositoryListUsers(userName) {
 }
 
 export async function listCommitsRepository(userName, repo) {
-  const url = `https://api.github.com/repos/${userName}/${repo}/commits`;
+  const url = `${api}/${userName}/${repo}/commits`;
 
   try {
     const response = await fetch(url);
@@ -67,7 +66,7 @@ export async function listCommitsRepository(userName, repo) {
 }
 
 export async function searchOrgsList(userName) {
-  const url = `https://api.github.com/users/${userName}/orgs`;
+  const url = `${api}/${userName}/orgs`;
 
   try {
     const response = await fetch(url);
@@ -79,7 +78,7 @@ export async function searchOrgsList(userName) {
 }
 
 export function followersList(userName) {
-  const url = `https://api.github.com/users/${userName}/followers`;
+  const url = `${api}/${userName}/followers`;
 
   return new Promise((resolve, reject) => {
     api
